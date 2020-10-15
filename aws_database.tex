@@ -1,10 +1,15 @@
+% Copyright 2020 Glen Newton
+% License: Creative Commons Attribution-ShareAlike 4.0 International License https://creativecommons.org/licenses/by-sa/4.0/legalcode
 \documentclass[12pt]{article}
 \usepackage{tikz}
 
 \usepackage[extreme]{savetrees}
 \usepackage{microtype}
 \usepackage[hidelinks]{hyperref}
-\usetikzlibrary{mindmap}
+\usetikzlibrary{mindmap,positioning}
+
+%\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+%\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
 
 % from: https://tex.stackexchange.com/questions/250150/formatting-mindmap-in-tikz
@@ -16,11 +21,11 @@
 
 \begin{document}
 \sffamily
-
 \pagestyle{empty}
           {\centering
             \makebox[0pt]{%
               \begin{tikzpicture}
+                \begin{scope}
                 [mindmap,
                   grow cyclic,
                   every node/.style=concept,
@@ -32,16 +37,16 @@
                 \node [root concept] {\href{https://aws.amazon.com/products/databases/}{\Large AWS Database Services}}
                 child [concept color=blue!40, rotate=20]{
                   node[concept] {\em Key-value}
-                  child { node[concept] {\href{https://aws.amazon.com/dynamodb}{DynamoDB}} }
+                  child { node[concept] {\href{https://aws.amazon.com/dynamodb}{Amazon\\ DynamoDB}} }
                 }
                 child [concept color=yellow!40, rotate=14]{
                   node   {\em In-memory}%[clockwise from=45, level distance=8cm]
-                  child [rotate=-15]{ node[concept] {\href{https://aws.amazon.com/elasticache/memcached/}{ElastiCache (Memcached)}} }
-                  child [rotate=-5]{ node[concept] {\href{https://aws.amazon.com/elasticache/redis}{ElastiCache (Redis)}} }
+                  child [rotate=-15]{ node[concept,alias=foo] {\href{https://aws.amazon.com/elasticache/memcached/}{Amazon\\ ElastiCache\\ (Memcached)}} }
+                  child [rotate=-5]{ node[concept] {\href{https://aws.amazon.com/elasticache/redis}{Amazon\\ ElastiCache\\ (Redis)}} }
                 }
                 child [concept color=purple!40, rotate=10]{
                   node    {\em Relational}
-                  child [rotate=-10]{ node    {\href{https://aws.amazon.com/rds/aurora/}{Aurora}}}
+                  child [rotate=-10]{ node    {\href{https://aws.amazon.com/rds/aurora/}{Amazon Aurora}}}
                   child { node    {\href{https://aws.amazon.com/rds/}{Amazon RDS}}
                     child { node[concept] {\href{https://aws.amazon.com/rds/mariadb/}{MariaDB}} }
                     child { node[concept] {\href{https://aws.amazon.com/rds/mysql/}{MySql}} }
@@ -49,27 +54,31 @@
                     child { node[concept] {\href{https://aws.amazon.com/rds/sqlserver/}{MS SQL Server} }}
                     child { node[concept] {\href{https://aws.amazon.com/rds/oracle/}{Oracle} }}
                   }
-                  child [rotate=10] { node    {\href{https://aws.amazon.com/redshift}{Redshift}} }
+                  child [rotate=10] { node    {\href{https://aws.amazon.com/redshift}{Amazon Redshift}} }
                 }
                 child [concept color=green!40, rotate=3]{
                   node     {\em Document}
-                  child { node    {\href{https://aws.amazon.com/documentdb}{DocumentDB}} }
+                  child { node    {\href{https://aws.amazon.com/documentdb}{Amazon\\ DocumentDB}} }
                 }
                 child [concept color=red!40, rotate=-5]{node  {\em Wide column}
-                  child { node[concept] {\href{https://aws.amazon.com/keyspaces/}{Keyspaces}} }
+                  child { node[concept] {\href{https://aws.amazon.com/keyspaces/}{Amazon Keyspaces}} }
                 }
                 child [concept color=gray!40, rotate=-12]{node  {\em Time series}
-                  child { node[concept] {\href{https://aws.amazon.com/timestream/}{Timestream}} }
+                  child { node[concept] {\href{https://aws.amazon.com/timestream/}{Amazon Timestream}} }
                 }
                 child [concept color=orange!40, rotate=-19] {node {\em Ledger}
-                  child { node {\href{https://aws.amazon.com/qldb}{QLDB}} }
+                  child { node {\href{https://aws.amazon.com/qldb}{Amazon QLDB}} }
                 }
                 child [concept color=violet!40, rotate=-25] {node {\em Graph}
-                  child { node {\href{https://aws.amazon.com/neptune}{Neptune}} }
+                  child { node {\href{https://aws.amazon.com/neptune}{Amazon Neptune}} }
+                };
+                \end{scope}
+                \node[below=3cm of foo](foox) {
+                  %                  Copyright 2020 Glen Newton
+                  \input{copyright}
                 };
             \end{tikzpicture}}\par}
+          {\tiny
 
-          \vspace*{2cm}
-          From: \url{https://aws.amazon.com/products/databases/}
-          
+}
 \end{document}
