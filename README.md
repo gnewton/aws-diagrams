@@ -6,7 +6,7 @@ A cloud poster a week!
 1. <img src="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png" alt="AWS Datapase Poser PNG Image" width="128"  align="right" />. <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf">PDF</a>
 
 Week | Poster
----- | ----
+:---: | ----
 1    | AWS Database: <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf">PDF</a>.<img src="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png" alt="AWS Datapase Poser PNG Image" width="128"  align="right" />
 2    | <img src="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png" alt="AWS Datapase Poser PNG Image" width="128"  align="right" />. <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf">PDF</a>
 
