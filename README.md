@@ -8,6 +8,9 @@ A cloud poster a week!
 * PNG image: <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png">
 ![AWS Databases:PNG](https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png =600x)
 </a>
+![AWS Databases:PNG](https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png)
+
+[![AWS Database poster][https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png]][https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png]
 
 * <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf">PDF</a> - with clickable links.
 
