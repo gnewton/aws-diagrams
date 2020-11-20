@@ -2,15 +2,12 @@
 
 A cloud poster a week! 
 
-1. Week 1: AWS Database: <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf">PDF</a>.<img src="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png" alt="AWS Datapase Poser PNG Image" width="128"  align="right" />
-1. <img src="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png" alt="AWS Datapase Poser PNG Image" width="128"  align="right" />. <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf">PDF</a>
-
 Week | Poster
 :---: | ----
-1    | AWS Database: <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf">PDF</a>.<img src="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png" alt="AWS Datapase Poser PNG Image" width="128"  align="right" />
-2    | <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf" alt="AWS Database Services Poster PNG Image">AWS Database Services Poster(PDF)</a><img src="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png" alt="AWS Database Services Poster PNG Image" width="128"  align="left" />
-3    | AWS Database: <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf">PDF</a>.<img src="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png" alt="AWS Datapase Poser PNG Image" width="128"  valign="top" />
-4    | <img src="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png" alt="AWS Datapase Poser PNG Image" width="128"  align="right" />. <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf">PDF</a>
+1    | <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf" alt="AWS Database Services Poster PNG Image">AWS Database Services Poster (PDF)</a><img src="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png" alt="AWS Database Services Poster PNG Image" width="128"  align="left" />
+2    | TBD
+3    | TBD
+
 
 
 # LICENSE
