@@ -5,6 +5,9 @@ A cloud poster a week!
 
 # AWS
 ## Database
+
+<img src="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png" alt="AWS Datapase Poser PNG Image" width="200"/>
+
 * PNG image: <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png">
 ![AWS Databases:PNG](https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png =600x)
 </a>
