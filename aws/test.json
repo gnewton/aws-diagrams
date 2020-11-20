@@ -1,0 +1,17 @@
+{
+    "label":"AWS Database Services"
+    "url":"https://aws.amazon.com/products/databases/"
+
+    "children":[
+        {
+            "label":"Key-value"
+            "children":[
+                {
+                    "label":"DynamoDB"
+                    "url":"https://aws.amazon.com/dynamodb"
+                },
+                
+
+            ]
+        }
+}
