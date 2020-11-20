@@ -5,11 +5,11 @@ A cloud poster a week!
 
 # AWS
 ## Database
-* PNG image: <a href="https://github.com/gnewton/aws-diagrams/raw/main/aws_database.png">
-![AWS Databases:PNG](https://github.com/gnewton/aws-diagrams/raw/main/aws_database.png =600x)
+* PNG image: <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png">
+![AWS Databases:PNG](https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.png =600x)
 </a>
 
-* <a href="https://github.com/gnewton/aws-diagrams/raw/main/aws_database.pdf">PDF</a> - with clickable links.
+* <a href="https://github.com/gnewton/cloud-poster-a-week/raw/main/aws/aws_database.pdf">PDF</a> - with clickable links.
 
 
 # LICENSE
