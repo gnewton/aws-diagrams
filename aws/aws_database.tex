@@ -22,8 +22,17 @@
 }
 
 \definecolor{myb}{rgb}{0, 0, 0.6}
+\definecolor{amorange}{RGB}{255,153,0}
+\definecolor{amtext}{RGB}{35,47,62}
 
 % from: https://tex.stackexchange.com/questions/107057/adjusting-font-size-with-tikz-picture
+
+\hypersetup{
+  pdftitle={AWS Database Services: Mind Map Poster},
+  pdfsubject={AWS, poster},
+  pdfauthor={Glen Newton},
+  pdfkeywords={AWS, database, poster, Dynamodb, Elasticache, Aurora, MariaDB, MySql, Postgresql, MS SQL, Oracle, Redshift, DocumentDB, Keyspaces, Timestream, QLDB, Neptune}
+}
 
 \begin{document}
 
@@ -37,45 +46,47 @@
               {
                 \begin{tikzpicture}
                   \begin{scope}
-                    \draw [ultra thick, fill=gray!60, fill opacity=0.5] (-11,-14) -- (11,-14) -- (11,11) -- (-11,11) -- (-11,-14);
+                    %\draw [ultra thick, fill=gray!60, fill opacity=0.5] (-11.4,-18) -- (11,-18) -- (11,11) -- (-11.4,11) -- (-11.4,-18);
+                                        \draw [ultra thick, inner color=gray!50!,outer color=blue!10!black, fill opacity=0.5] (-11.4,-18) -- (11,-18) -- (11,11) -- (-11.4,11) -- (-11.4,-18);
                   \end{scope}
                   \begin{scope}
                     [mindmap,
                       grow cyclic,
                       every node/.style=concept,
-                      concept color=teal!40,
-                      level 1/.append style={sibling angle=360/7, level distance=6.2cm,minimum size=3.2cm},
-                      level 2/.append style={sibling angle=37.5, level distance=3.8cm,minimum size=2.3cm},
-                      level 3/.append style={level distance=3cm,minimum size=1.4cm,font=\footnotesize},
+                      %                      concept color=teal!40,
+                      concept color=amorange,
+                      level 1/.append style={sibling angle=360/7, level distance=6.2cm,minimum size=3.2cm,font=\large},
+                      level 2/.append style={sibling angle=37.5, level distance=3.9cm,minimum size=2.8cm, font=\normalsize},
+                      level 3/.append style={level distance=3.3cm,minimum size=1.8cm,font=\small},
                     ]
-                    \node [root concept] {\color{myb} \href{https://aws.amazon.com/products/databases/}{\Large \bfseries AWS Database Services}}
+                    \node [root concept, yshift=-2cm,xshift=-2mm] {\color{amtext} \href{https://aws.amazon.com/products/databases/}{\Large \bfseries AWS Database Services}}
                     child [concept color=blue!40, rotate=20]{
                       node[concept] {\bfseries Key-value}
                       child { node[concept] {\color{myb} \href{https://aws.amazon.com/dynamodb}{Amazon\\ DynamoDB}} }
                     }
                     child [concept color=yellow!50, rotate=14]{
                       node   {\bfseries In-memory}%[clockwise from=45, level distance=8cm]
-                      child [rotate=-15]{ node[concept,alias=foo] {\color{myb} \href{https://aws.amazon.com/elasticache/memcached/}{Amazon\\ ElastiCache\\ {\tiny (Memcached})}} }
-                      child [rotate=-5]{ node[concept] {\color{myb} \href{https://aws.amazon.com/elasticache/redis}{Amazon\\ ElastiCache}\\ {\tiny (Redis})} }
+                      child [rotate=-15]{ node[concept,alias=foo] {\color{myb} \href{https://aws.amazon.com/elasticache/memcached/}{Amazon\\ ElastiCache\\ {\footnotesize (Memcached})}} }
+                      child [rotate=-5]{ node[concept] {\color{myb} \href{https://aws.amazon.com/elasticache/redis}{Amazon\\ ElastiCache}\\ {\footnotesize (Redis})} }
                     }
                     child [concept color=purple!40, rotate=10]{
                       node    {\bfseries Relational}
                       child [rotate=-10]{ node    {\color{myb} \href{https://aws.amazon.com/rds/aurora/}{Amazon Aurora}}}
                       child { node    {\color{myb} \href{https://aws.amazon.com/rds/}{Amazon RDS}}
-                        child { node[concept] {\color{myb} \href{https://aws.amazon.com/rds/mariadb/}{MariaDB}} }
-                        child { node[concept] {\color{myb} \href{https://aws.amazon.com/rds/mysql/}{MySql}} }
+                        child [rotate=-6]{ node[concept] {\color{myb} \href{https://aws.amazon.com/rds/mariadb/}{MariaDB}} }
+                        child [rotate=-3]{ node[concept] {\color{myb} \href{https://aws.amazon.com/rds/mysql/}{MySql}} }
                         child { node[concept] {\color{myb} \href{https://aws.amazon.com/rds/postgresql/}{Postgre-- SQL} }}
-                        child { node[concept] {\color{myb} \href{https://aws.amazon.com/rds/sqlserver/}{MS SQL Server} }}
-                        child { node[concept] {\color{myb} \href{https://aws.amazon.com/rds/oracle/}{Oracle} }}
+                        child [rotate=3]{ node[concept] {\color{myb} \href{https://aws.amazon.com/rds/sqlserver/}{MS SQL Server} }}
+                        child [rotate=7]{ node[concept] {\color{myb} \href{https://aws.amazon.com/rds/oracle/}{Oracle} }}
                       }
                       child [rotate=10] { node    {\color{myb} \href{https://aws.amazon.com/redshift}{Amazon Redshift}} }
                     }
                     child [concept color=green!40, rotate=3]{
                       node     {\bfseries Document}
-                      child { node    {\color{myb} \href{https://aws.amazon.com/documentdb}{Amazon\\ DocumentDB\\{\tiny (MongoDB compat)}}} }
+                      child { node   {\color{myb} \href{https://aws.amazon.com/documentdb}{Amazon\\DocumentDB\\{\footnotesize (MongoDB compat)}}} }
                     }
                     child [concept color=red!40, rotate=-5]{node  {\bfseries Wide column}
-                      child { node[concept] {\color{myb}  \href{https://aws.amazon.com/keyspaces/}{Amazon Keyspaces\\{\tiny (Cassandra})}} }
+                      child { node[concept] {\color{myb}  \href{https://aws.amazon.com/keyspaces/}{Amazon Keyspaces\\{\footnotesize (Cassandra})}} }
                     }
                     child [concept color=gray!60, rotate=-12]{node  {\bfseries Time series}
                       child { node[concept] {\color{myb} \href{https://aws.amazon.com/timestream/}{Amazon Timestream}} }
@@ -87,7 +98,10 @@
                       child { node {\color{myb} \href{https://aws.amazon.com/neptune}{Amazon Neptune}} }
                     };
                   \end{scope}
-                  \node[xshift=-7.3cm,yshift=-13.3cm](foox) {
+                  \node[xshift=0cm,yshift=10cm](title) {
+                    \Huge AWS Database Services: Mind Map Poster
+                    };
+                  \node[xshift=-4.9cm,yshift=-16.5cm](foox) {
                     %                  Copyright 2020 Glen Newton
                     \input{../templates/copyright}
                   };

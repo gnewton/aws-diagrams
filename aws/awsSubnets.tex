@@ -1,0 +1,114 @@
+%\documentclass[border=14pt]{standalone}
+\documentclass[border=14pt]{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usetikzlibrary{backgrounds}
+
+\begin{document}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\boundellipse}[3]% center, xdim, ydim
+           {(#1) ellipse (#2 and #3)
+           }
+
+\sffamily
+\pagestyle{empty}
+{
+  \centering
+  \noindent
+  \makebox[0pt]{%
+    %\resizebox{\columnwidth}{!}
+                         {
+                           \begin{tikzpicture}[
+                               region/.style={color=orange,opacity=0.4,draw=black},
+                               az/.style={color=blue!80,opacity=0.4,draw=black},
+                               vpc/.style={color=red!80,opacity=0.4,draw=white},
+                               subnet/.style={color=green!40,draw opacity=0.5, draw=black}
+                             ]
+
+
+                             %\begin{scope}[fill opacity=0.4]
+                             %\fill[region] \boundellipse{0,0}{11}{11};
+                             \draw (13cm, 0) node[region,regular polygon, regular polygon sides=6, minimum width=18cm, fill ] {};
+
+                             % AZ1
+                             %\fill[az] \boundellipse{-4.5,2.5}{4.5}{4.5};
+                             \draw (11, 2.5) node[az,regular polygon, regular polygon sides=6, minimum width=7cm, fill ] {};
+                             % AZ2
+                             %\fill[az] \boundellipse{3.5,-4}{4.5}{4.5};
+                             \draw (15, -3.5) node[az,regular polygon, regular polygon sides=6, minimum width=7cm, fill ] {};
+                             % AZ3
+                             %\fill[az] \boundellipse{4.8,4.8}{3}{3};
+                             \draw (17,4) node[az,regular polygon, regular polygon sides=6, minimum width=4cm, fill ] {};
+                             
+                             % VPC1
+                             \fill[vpc, rotate=-45] \boundellipse{9,9}{5.5}{1};
+                             %VPC2
+                             \fill[vpc,rotate=45] \boundellipse{3,0.5}{4}{6};
+
+                             %VPC3
+                             \fill[vpc,rotate=45] \boundellipse{0,-7}{2}{2};
+
+                             \fill[subnet] \boundellipse{-1.5,3}{.9}{.7};
+                             \fill[subnet] \boundellipse{-2,5}{.9}{.7};
+
+                             \fill[subnet] \boundellipse{-3,-0.5}{.9}{.7};
+                             \fill[subnet] \boundellipse{-5,.35}{.9}{.7};
+                             \fill[subnet] \boundellipse{-6,2}{.9}{.7};
+
+                             
+                             \fill[subnet] \boundellipse{.7,-5}{.9}{.7};
+
+                             \fill[subnet] \boundellipse{4.5,-1}{.9}{.7};
+                             \fill[subnet] \boundellipse{2,-1}{.9}{.7};
+
+                             \fill[subnet] \boundellipse{4.5,3.5}{.9}{.7};
+                             \fill[subnet] \boundellipse{3,5}{.9}{.7};
+
+
+
+
+
+                             
+                             %  \end{scope}
+                             %%%%% Subnets
+                             
+                             \fill[subnet] \boundellipse{5,-5}{.9}{.7};
+                             
+                             \node at (0,9.3)    {\textsf{\huge \bf AWS Region}};
+
+                             \node at (-4.8,6.5)    {\textsf{\Large \bf AZ 1}};
+                             \node at (-6,2)    {\textsf{Subnet 1A}};
+                             \node at (-5,0.4)    {\textsf{Subnet 1B}};
+                             \node at (-3,-0.45)    {\textsf{Subnet 1C}};
+                             \node at (.7,-5)    {\textsf{Subnet 1D}};
+
+
+                             \node at (6.7,-2.1)    {\textsf{\Large \bf AZ 2}};
+                             \node at (-7.2,3.2)    {\textsf{\Large \bf VPC 1}};
+                             \node at (0,7)    {\textsf{\Large \bf VPC 2}};
+
+                             \node at (5,7.3)    {\textsf{\Large\bf AZ 3}};
+
+                             \node at (5,-3.5)    {\textsf{\Large \bf VPC 3}};
+                             \node at (5,-5)    {\textsf{Subnet 3A}};
+
+                             \node at (-2,5)    {\textsf{Subnet 2A}};
+                             \node at (-1.5,3)    {\textsf{Subnet 2B}};
+
+                             \node at (3,5)    {\textsf{Subnet 2C}};
+                             \node at (4.5,3.5)    {\textsf{Subnet 2D}};
+
+                             \node at (2,-1)    {\textsf{Subnet 2E}};
+                             \node at (4.5,-1)    {\textsf{Subnet 2F}};
+
+                             %% \begin{scope}[on background layer]
+                             %%   %\fill[green]   (current bounding box.south west) rectangle (current bounding box.north east);
+                             %%   \draw[black,step=.5cm]   (current bounding box.south west) grid (current bounding box.north east);
+                             %% \end{scope}
+                             
+
+                           \end{tikzpicture}
+           }}}
+\end{document}

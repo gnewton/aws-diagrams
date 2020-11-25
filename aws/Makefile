@@ -1,8 +1,10 @@
 all: database general images
 
 images: all
-	gs -dBATCH -dNOPAUSE -dQUIET -dSAFER -sDEVICE=jpeg -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -dDOINTERPOLATE -dCOLORSCREEN -r500 -o aws_database.png aws_database.pdf
-	gs -dBATCH -dNOPAUSE -dQUIET -dSAFER -sDEVICE=jpeg -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -dDOINTERPOLATE -dCOLORSCREEN -r500 -o aws_general.png aws_general.pdf 	
+	gs  -dBATCH -dNOPAUSE -dQUIET -dSAFER -sDEVICE=jpeg -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -dDOINTERPOLATE -dCOLORSCREEN -r600 -o aws_database.jpg aws_database.pdf
+	gs  -dBATCH -dNOPAUSE -dQUIET -dSAFER -sDEVICE=png16m -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -dDOINTERPOLATE -dCOLORSCREEN -r600 -o aws_database.png aws_database.pdf
+
+	gs -dBATCH -dNOPAUSE -dQUIET -dSAFER -sDEVICE=jpeg -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -dDOINTERPOLATE -dCOLORSCREEN -r500 -o aws_general.jpg aws_general.pdf 	
 
 database:
 	pdflatex aws_database
